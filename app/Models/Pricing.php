@@ -22,7 +22,7 @@ class Pricing extends Model
         return $this->hasMany(Transaction::class);
     }
 
-    public function isSubscription($userId)
+    public function isSubscribedByUser($userId)
     {
         return $this->transaction()
             ->where('user_id', $userId)
